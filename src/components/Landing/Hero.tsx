@@ -12,7 +12,7 @@ const typewriterTexts = [
   "Bridge 0.1 ETH when gas under 20 gwei",
 ];
 
-const CONTRACT_ADDRESS = "0x0000000000000000000000000000000000000000";
+const CONTRACT_ADDRESS = "5LswG53rHddBAwGetYRecv2EBqeizUuWHuYecDV1pump";
 
 export function Hero() {
   const [currentText, setCurrentText] = useState(0);
