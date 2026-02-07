@@ -149,7 +149,7 @@ export function Footer() {
           {/* Bottom */}
           <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-zinc-500">
-              © 2025 Claw-Nomad. All rights reserved.
+              © 2026 Claw-Nomad. All rights reserved.
             </p>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500" />
