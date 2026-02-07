@@ -15,10 +15,7 @@ export default function LandingPage() {
     <main className="min-h-screen">
       <Navbar />
       <Hero />
-      <ContractAddress
-        address="0x0000000000000000000000000000000000000000"
-        network="Ethereum"
-      />
+      <ContractAddress />
       <Features />
       <HowItWorks />
       <UseCases />
