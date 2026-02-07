@@ -2,6 +2,8 @@ export { Navbar } from "./Navbar";
 export { Hero } from "./Hero";
 export { ContractAddress } from "./ContractAddress";
 export { Features } from "./Features";
+export { WhyClawNomad } from "./WhyClawNomad";
+export { Comparison } from "./Comparison";
 export { HowItWorks } from "./HowItWorks";
 export { UseCases } from "./UseCases";
 export { Stats } from "./Stats";

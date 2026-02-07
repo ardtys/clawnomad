@@ -3,6 +3,8 @@ import {
   Hero,
   ContractAddress,
   Features,
+  WhyClawNomad,
+  Comparison,
   HowItWorks,
   UseCases,
   Stats,
@@ -17,6 +19,8 @@ export default function LandingPage() {
       <Hero />
       <ContractAddress />
       <Features />
+      <WhyClawNomad />
+      <Comparison />
       <HowItWorks />
       <UseCases />
       <Stats />
