@@ -7,6 +7,7 @@ import { Github, Twitter, Send } from "lucide-react";
 const navigation = {
   product: [
     { name: "Features", href: "/features" },
+    { name: "Tools", href: "/tools" },
     { name: "How it works", href: "/how-it-works" },
     { name: "Use cases", href: "/use-cases" },
     { name: "Roadmap", href: "/roadmap" },

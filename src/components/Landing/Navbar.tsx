@@ -8,6 +8,7 @@ import { Menu, X, ArrowRight, ChevronRight, Github, Twitter, Send } from "lucide
 
 const navLinks = [
   { label: "Features", href: "/features" },
+  { label: "Tools", href: "/tools" },
   { label: "How it works", href: "/how-it-works" },
   { label: "Use cases", href: "/use-cases" },
   { label: "Roadmap", href: "/roadmap" },
