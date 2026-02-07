@@ -1,7 +1,6 @@
 import {
   Navbar,
   Hero,
-  ContractAddress,
   Features,
   WhyClawNomad,
   Comparison,
@@ -17,7 +16,6 @@ export default function LandingPage() {
     <main className="min-h-screen">
       <Navbar />
       <Hero />
-      <ContractAddress />
       <Features />
       <WhyClawNomad />
       <Comparison />

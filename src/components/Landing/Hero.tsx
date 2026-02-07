@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Terminal, Cpu } from "lucide-react";
+import { ArrowRight, Terminal, Cpu, Copy, Check } from "lucide-react";
 import Link from "next/link";
 
 const typewriterTexts = [
@@ -12,10 +12,19 @@ const typewriterTexts = [
   "Bridge 0.1 ETH when gas under 20 gwei",
 ];
 
+const CONTRACT_ADDRESS = "0x0000000000000000000000000000000000000000";
+
 export function Hero() {
   const [currentText, setCurrentText] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
+  const [copied, setCopied] = useState(false);
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(CONTRACT_ADDRESS);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   useEffect(() => {
     const text = typewriterTexts[currentText];
@@ -100,12 +109,41 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.25 }}
-          className="flex items-center justify-center gap-2 mb-8 sm:mb-12"
+          className="flex items-center justify-center gap-2 mb-6 sm:mb-8"
         >
           <span className="text-sm sm:text-base text-zinc-500">Powered by</span>
           <span className="text-sm sm:text-base font-bold bg-gradient-to-r from-terminal-glow to-lime-400 bg-clip-text text-transparent">
             Open Claw
           </span>
+        </motion.div>
+
+        {/* Contract Address */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.28 }}
+          className="flex justify-center mb-8 sm:mb-12 px-4"
+        >
+          <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl bg-zinc-900/80 border border-zinc-800 backdrop-blur-sm">
+            <div className="flex items-center gap-2">
+              <span className="text-xs sm:text-sm text-zinc-500 font-medium">CA:</span>
+              <code className="text-xs sm:text-sm font-mono text-terminal-glow">
+                <span className="hidden sm:inline">{CONTRACT_ADDRESS}</span>
+                <span className="sm:hidden">{CONTRACT_ADDRESS.slice(0, 6)}...{CONTRACT_ADDRESS.slice(-4)}</span>
+              </code>
+            </div>
+            <button
+              onClick={copyToClipboard}
+              className="p-1.5 sm:p-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors group"
+              aria-label="Copy contract address"
+            >
+              {copied ? (
+                <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-400" />
+              ) : (
+                <Copy className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-zinc-400 group-hover:text-white transition-colors" />
+              )}
+            </button>
+          </div>
         </motion.div>
 
         {/* Interactive Terminal Preview */}
