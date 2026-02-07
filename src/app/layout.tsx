@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -13,21 +13,20 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+export const viewport: Viewport = {
+  themeColor: "#39ff14",
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://claw-nomad.vercel.app"),
   title: "Claw-Nomad | Autonomous AI Agent Protocol",
   description: "Deploy AI agents that move seamlessly between Web2 services, blockchain networks, and Moltworld — all while you maintain complete control.",
   icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" },
-      { url: "/favicon.png", sizes: "192x192", type: "image/png" },
-    ],
-    shortcut: "/favicon.ico",
-    apple: [
-      { url: "/logo.png", sizes: "180x180", type: "image/png" },
-    ],
+    icon: "/favicon.ico",
+    apple: "/logo.png",
   },
-  manifest: "/manifest.json",
   openGraph: {
     title: "Claw-Nomad | Autonomous AI Agent Protocol",
     description: "Deploy AI agents that move seamlessly between Web2 services, blockchain networks, and Moltworld.",
@@ -50,12 +49,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="32x32" />
-        <link rel="icon" href="/favicon.png" type="image/png" sizes="192x192" />
-        <link rel="apple-touch-icon" href="/logo.png" />
-        <meta name="theme-color" content="#39ff14" />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-terminal-darker text-foreground`}
       >
