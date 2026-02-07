@@ -237,7 +237,7 @@ export function DocsLayout({ children }: DocsLayoutProps) {
       <div className="p-4 border-t border-zinc-800">
         <div className="space-y-2">
           <a
-            href="https://github.com/claw-nomad"
+            href="https://github.com/clawnomad-dev/clawnomad"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-zinc-500 hover:text-white hover:bg-zinc-800/30 transition-colors"
@@ -386,7 +386,7 @@ export function DocsLayout({ children }: DocsLayoutProps) {
                   No
                 </button>
                 <a
-                  href="https://github.com/claw-nomad/docs/edit"
+                  href="https://github.com/clawnomad-dev/clawnomad"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-zinc-500 hover:text-white transition-colors"

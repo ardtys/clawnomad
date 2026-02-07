@@ -51,18 +51,20 @@ export function Footer() {
             </p>
             <div className="flex items-center gap-3">
               <a
-                href="https://twitter.com"
+                href="https://x.com/ClawNomad"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-zinc-500 hover:text-white transition-colors"
+                aria-label="Twitter"
               >
                 <Twitter className="w-5 h-5" />
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/clawnomad-dev/clawnomad"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-zinc-500 hover:text-white transition-colors"
+                aria-label="GitHub"
               >
                 <Github className="w-5 h-5" />
               </a>
@@ -147,7 +149,7 @@ export function Footer() {
           {/* Bottom */}
           <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-zinc-500">
-              © 2024 Claw-Nomad. All rights reserved.
+              © 2025 Claw-Nomad. All rights reserved.
             </p>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500" />

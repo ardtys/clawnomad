@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ArrowRight, ChevronRight } from "lucide-react";
+import { Menu, X, ArrowRight, ChevronRight, Github, Twitter } from "lucide-react";
 
 const navLinks = [
   { label: "Features", href: "/features" },
@@ -75,8 +75,26 @@ export function Navbar() {
               ))}
             </div>
 
-            {/* CTA - Desktop */}
-            <div className="hidden lg:flex items-center">
+            {/* Social & CTA - Desktop */}
+            <div className="hidden lg:flex items-center gap-4">
+              <a
+                href="https://x.com/ClawNomad"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 text-zinc-400 hover:text-white transition-colors"
+                aria-label="Twitter"
+              >
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a
+                href="https://github.com/clawnomad-dev/clawnomad"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 text-zinc-400 hover:text-white transition-colors"
+                aria-label="GitHub"
+              >
+                <Github className="w-5 h-5" />
+              </a>
               <Link href="/dashboard">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -149,13 +167,35 @@ export function Navbar() {
                 ))}
               </div>
 
-              {/* CTA Button */}
+              {/* Social Links & CTA Button */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.3 }}
                 className="mt-auto space-y-4"
               >
+                {/* Social Links */}
+                <div className="flex items-center justify-center gap-4 pb-4 border-b border-zinc-800">
+                  <a
+                    href="https://x.com/ClawNomad"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-lg transition-colors"
+                    aria-label="Twitter"
+                  >
+                    <Twitter className="w-6 h-6" />
+                  </a>
+                  <a
+                    href="https://github.com/clawnomad-dev/clawnomad"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-lg transition-colors"
+                    aria-label="GitHub"
+                  >
+                    <Github className="w-6 h-6" />
+                  </a>
+                </div>
+
                 <Link
                   href="/dashboard"
                   className="flex items-center justify-center gap-2 w-full py-4 text-lg font-semibold bg-terminal-glow text-zinc-900 rounded-xl hover:bg-lime-400 transition-colors"
