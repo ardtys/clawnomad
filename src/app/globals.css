@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #050508;
+  --foreground: #ededed;
+  --terminal-glow: #39ff14;
+  --glass-bg: rgba(10, 10, 15, 0.7);
+  --glass-border: rgba(57, 255, 20, 0.15);
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(57, 255, 20, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 100% 50%, rgba(139, 92, 246, 0.05) 0%, transparent 40%),
+    radial-gradient(ellipse at 0% 100%, rgba(59, 130, 246, 0.05) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(57, 255, 20, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(57, 255, 20, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .glass-card {
+    background: rgba(10, 10, 15, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(57, 255, 20, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+
+  .glass-card-hover {
+    @apply glass-card transition-all duration-300;
+  }
+
+  .glass-card-hover:hover {
+    border-color: rgba(57, 255, 20, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgba(57, 255, 20, 0.15);
+    transform: translateY(-2px);
+  }
+
+  .glow-text {
+    color: #39ff14;
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.5), 0 0 20px rgba(57, 255, 20, 0.3);
+  }
+
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+
+  .status-success {
+    background: #22c55e;
+    box-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
+  }
+
+  .status-pending {
+    background: #f59e0b;
+    box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+
+  .status-intercepted {
+    background: #ef4444;
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+  }
+
+  .node-web2 {
+    border-radius: 50%;
+  }
+
+  .node-web3 {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+
+  .node-moltworld {
+    border-radius: 4px;
+  }
+
+  .hash-display {
+    font-family: var(--font-geist-mono), monospace;
+    font-size: 0.75rem;
+    color: #6b7280;
+    letter-spacing: 0.05em;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(10, 10, 15, 0.5);
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(57, 255, 20, 0.3);
+    border-radius: 3px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(57, 255, 20, 0.5);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Documentation Styles */
+.docs-content h2 {
+  scroll-margin-top: 5rem;
+}
+
+.docs-content h3 {
+  scroll-margin-top: 5rem;
+}
+
+.docs-content p {
+  line-height: 1.7;
+}
+
+.docs-content ul,
+.docs-content ol {
+  line-height: 1.7;
+}
+
+.docs-content a {
+  color: #39ff14;
+  text-decoration: none;
+}
+
+.docs-content a:hover {
+  text-decoration: underline;
+}
+
+.docs-content code {
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.docs-content pre {
+  overflow-x: auto;
+}
+
+.docs-content pre::-webkit-scrollbar {
+  height: 6px;
+}
+
+.docs-content pre::-webkit-scrollbar-track {
+  background: rgba(10, 10, 15, 0.5);
+}
+
+.docs-content pre::-webkit-scrollbar-thumb {
+  background: rgba(57, 255, 20, 0.3);
+  border-radius: 3px;
+}
+
+.docs-content pre::-webkit-scrollbar-thumb:hover {
+  background: rgba(57, 255, 20, 0.5);
+}
