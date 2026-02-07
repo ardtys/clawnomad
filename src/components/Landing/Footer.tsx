@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Github, Twitter } from "lucide-react";
+import { Github, Twitter, Send } from "lucide-react";
 
 const navigation = {
   product: [
@@ -58,6 +58,15 @@ export function Footer() {
                 aria-label="Twitter"
               >
                 <Twitter className="w-5 h-5" />
+              </a>
+              <a
+                href="https://t.me/clawnomad"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-zinc-500 hover:text-white transition-colors"
+                aria-label="Telegram"
+              >
+                <Send className="w-5 h-5" />
               </a>
               <a
                 href="https://github.com/clawnomad-dev/clawnomad"

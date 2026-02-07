@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ArrowRight, ChevronRight, Github, Twitter } from "lucide-react";
+import { Menu, X, ArrowRight, ChevronRight, Github, Twitter, Send } from "lucide-react";
 
 const navLinks = [
   { label: "Features", href: "/features" },
@@ -86,6 +86,15 @@ export function Navbar() {
                 aria-label="Twitter"
               >
                 <Twitter className="w-5 h-5" />
+              </a>
+              <a
+                href="https://t.me/clawnomad"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 text-zinc-400 hover:text-white transition-colors"
+                aria-label="Telegram"
+              >
+                <Send className="w-5 h-5" />
               </a>
               <a
                 href="https://github.com/clawnomad-dev/clawnomad"
@@ -185,6 +194,15 @@ export function Navbar() {
                     aria-label="Twitter"
                   >
                     <Twitter className="w-6 h-6" />
+                  </a>
+                  <a
+                    href="https://t.me/clawnomad"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-lg transition-colors"
+                    aria-label="Telegram"
+                  >
+                    <Send className="w-6 h-6" />
                   </a>
                   <a
                     href="https://github.com/clawnomad-dev/clawnomad"
