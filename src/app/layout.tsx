@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   title: "Claw-Nomad | Autonomous AI Agent Protocol",
   description: "Deploy AI agents that move seamlessly between Web2 services, blockchain networks, and Moltworld — all while you maintain complete control.",
   icons: {
-    icon: "/favicon.ico",
-    apple: "/logo.png",
+    icon: "/icon.png",
+    apple: "/apple-icon.png",
   },
   openGraph: {
     title: "Claw-Nomad | Autonomous AI Agent Protocol",
